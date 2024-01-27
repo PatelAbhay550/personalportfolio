@@ -7,7 +7,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
+* {
+  font-family: "Poppins", sans-serif;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -18,6 +20,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -29,5 +33,48 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eaff00;
+  border-radius: 10px;
+}
+.scl::-webkit-scrollbar {
+  display: none;
+}
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 9999;
+}
+
+.down {
+  animation: down 0.92s infinite alternate cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes down {
+  0% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 5px;
   }
 }
