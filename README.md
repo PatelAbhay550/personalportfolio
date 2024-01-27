@@ -2,7 +2,7 @@
 
 ## Abhay Raj Patel
 
-Hello friends, Iam Abhay
+Hello friends, I am Abhay
 
 ```bash
 git init love
