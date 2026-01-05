@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect } from "react"; // Import your MouseFollower component
-import MouseFollower from "./Mousefollower";
+import MouseFollower from "./MouseFollower";
 
 const Forth = () => {
   return (
